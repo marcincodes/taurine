@@ -4,6 +4,10 @@
 
 Node.js is packed with your server code to single binary using [pkg](https://github.com/vercel/pkg) and then run using Tauri sidecar feature.
 
+> NOTE ⚠️
+> This starter **isn't** production ready and probably won't work on every platform. Also Tauri is **not recommending** using localhost protocol that is used here. For security reasons use tauri custom protocol.
+
+
 ![Taurine demo](https://marcin.page/images/taurine-demo.gif)
 
 ## Features
