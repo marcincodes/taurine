@@ -1,0 +1,50 @@
+{
+  "name": "taurine",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "bin": "dist/server.js",
+  "scripts": {
+    "app:dev": "vite --config vite.config.ts",
+    "app:build": "tsc && vite build",
+    "server:dev": "node scripts/watch-server.js",
+    "server:build": "node scripts/build-server.js",
+    "dev": "run-p server:dev app:dev",
+    "build": "tsc && run-s server:build app:build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@fastify/cors": "8.1.0",
+    "@tauri-apps/api": "1.1.0",
+    "@trpc/client": "9.27.2",
+    "@trpc/react": "9.27.2",
+    "@trpc/server": "9.27.2",
+    "fastify": "4.5.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "3.39.2",
+    "zod": "3.19.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "1.1.1",
+    "@types/node": "18.7.10",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@vitejs/plugin-react": "2.0.0",
+    "chokidar": "3.5.3",
+    "esbuild": "0.15.9",
+    "execa": "5.1.1",
+    "npm-run-all": "4.1.5",
+    "ora": "6.1.2",
+    "pkg": "5.2.1",
+    "typescript": "4.6.4",
+    "vite": "3.0.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18.2.0"
+      }
+    }
+  }
+}
